@@ -1,7 +1,6 @@
 package com.javabasics.services;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -23,6 +22,7 @@ public class WelcomeTest {
         String message = "Hello, World.";
         welcome.displayMessage(message);
         Assertions.assertEquals(message, outContent.toString().trim());
+
         System.setOut(save_out);
     }
 }
