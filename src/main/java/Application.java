@@ -1,5 +1,5 @@
-import com.javabasics.services.JavaStdIO;
-import com.javabasics.services.Welcome;
+import com.biradarcoders.services.JavaStdIO;
+import com.biradarcoders.services.Welcome;
 
 public class Application {
     public static void main(String[] args) {

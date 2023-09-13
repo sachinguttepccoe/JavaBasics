@@ -1,4 +1,4 @@
-package com.javabasics.services;
+package com.biradarcoders.services;
 
 public class Welcome {
     public void displayMessage(String message){
