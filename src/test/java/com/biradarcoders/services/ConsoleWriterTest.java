@@ -1,6 +1,6 @@
 package com.biradarcoders.services;
 
-import com.biradarcoders.services.Welcome;
+import com.biradarcoders.interfaces.Printable;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -8,9 +8,8 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-public class WelcomeTest {
+public class ConsoleWriterTest {
 
-    public final Welcome welcome= new Welcome();
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
 
@@ -21,9 +20,8 @@ public class WelcomeTest {
         System.setOut(new PrintStream(outContent));
 
         String message = "Hello, World.";
-        welcome.displayMessage(message);
+        Printable.print(message);
         Assertions.assertEquals(message, outContent.toString().trim());
-
         System.setOut(save_out);
     }
 }
